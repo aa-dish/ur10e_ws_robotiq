@@ -1,0 +1,24 @@
+# Where things go.  All numbers are in the robot base_link frame [m]  (base_link is at world (0.842, -0.500, 0.600)).
+home_q: [0.0, -1.57, 0.0, -1.57, 0.0, 0.0]       # observe pose: arm straight up, outside the camera view
+bin:
+  center: [0.7894, -0.6082]       # trash bin centre  (world 1.631, -1.108 minus the base position)
+  rim_z: 0.068                    # top edge of the bin (world 0.668 - 0.600)
+  half_size: [0.17, 0.24]         # usable opening
+  release_clearance: 0.12         # object bottom this far above the rim when released
+table_bounds: [-0.44, 0.45, -0.91, -0.33]   # usable table surface (x_min, x_max, y_min, y_max)
+table_places:                     # free-spot search regions on the table (x_min, x_max, y_min, y_max)
+  table_left:   [-0.45, -0.20, -0.90, -0.35]
+  table_right:  [0.20, 0.45, -0.90, -0.35]
+  table_front:  [-0.30, 0.30, -0.50, -0.34]
+  table_back:   [-0.30, 0.30, -0.90, -0.70]
+  table_center: [-0.12, 0.12, -0.75, -0.50]
+motion:
+  joint_speed: 1.0                # rad/s for free moves
+  joint_accel_time: 0.6           # minimum time-scaling ramp [s]
+  line_speed: 0.15                # m/s for straight approach/lift moves
+  carry_speed: 0.35               # m/s for horizontal carry
+  approach_height: 0.12           # pre-grasp height above the grasp point [m]
+  lift_height: 0.30               # lift after grasp [m]  (object bottom must clear everything)
+  travel_margin: 0.20             # travel plane = highest object + this  (tcp, above the table)
+  max_travel_above_table: 0.52
+  settle_time: 0.4

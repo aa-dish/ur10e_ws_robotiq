@@ -1,0 +1,37 @@
+# [UR_GRIPPER=2f140, default]  Robotiq 2F-140 model used by the grasp planner.  Every number was measured from the
+# 2F-140 collision meshes (ur_description/meshes/robotiq_2f_140/collision) with the joint chain of
+# gripper_2f140.urdf.xacro, in the tcp frame:  x = closing direction, y = across the pads, z = approach axis (+z toward the object).
+#
+# The ONE actuated joint is gripper_joint = theta:  0 rad = fully open, ~0.695 rad = fully closed.
+# gap_lut maps theta -> inner gap between the two pad faces [m] (open: 128.5 mm between the collision pads, nominal stroke 140 mm).
+# The pad slides ~1.5 cm along the approach axis while closing; tcp_z is chosen so the tcp sits at the pad centre at theta ~0.3.
+gripper:
+  tcp_z: 0.205                # tool0 -> tcp [m] (11 mm adapter plate + ...); must match the urdf (auto-selected by gripper:=2f140)
+  open_theta: 0.0             # default "open" command (gap 0.1285 m)
+  max_theta: 0.69             # never command beyond this (hard stop 0.70)
+  finger_reach_closed: 0.042  # how far the pad bottoms reach below the tcp when closed on an object [m]
+  finger_open_reach: 0.040    # ... and while open for the approach (theta 0.1 .. 0.5) [m]
+  finger_pad_width: 0.032     # finger width along the tool y axis [m]
+  finger_outer: 0.020         # outer edge of the finger links beyond the inner pad face [m]
+  inner_edge_inset: 0.0
+  inner_rise: 0.085           # between the pads nothing but the palm (about 0.10 m above the tcp)
+  max_object_width: 0.120     # widest object across the closing direction [m]  (open gap 128.5 mm)
+  min_object_width: 0.012
+  squeeze: 0.006              # command the fingers this much narrower than the object [m]
+  open_margin: 0.020          # open to (object width + this) before the descent [m]
+  min_open_gap: 0.070         # ... but never narrower than this [m]
+  # Between the pads there is no mechanism (it sits outside the pad faces), so objects may rise up to ~8 cm above the tcp.
+  # We grasp somewhat lower than that (rise 3.5 cm) to hold tall objects nearer their middle.
+  rise_profile:
+    - [0.035, 0.080]
+    - [0.040, 0.040]
+    - [0.045, 0.010]
+  gap_lut:
+    - [0.0, 0.1285]
+    - [0.1, 0.1127]
+    - [0.2, 0.0956]
+    - [0.3, 0.0777]
+    - [0.4, 0.0589]
+    - [0.5, 0.0395]
+    - [0.6, 0.0198]
+    - [0.695, 0.0008]

@@ -1,0 +1,38 @@
+# [UR_GRIPPER=2f85]  Robotiq 2F-85 model used by the grasp planner.   Every number below was measured from the gripper meshes
+# (ur_description/meshes/robotiq_2f_85/collision) with the joint chain of gripper.urdf.xacro, in the tcp frame:
+#   x = closing direction, y = across the pads, z = approach axis (+z points toward the object).
+#
+# The ONE actuated joint is gripper_joint = theta:  0 rad = fully open (85 mm),
+# 0.7929 rad = fully closed.  gap_lut maps theta -> inner gap between the two finger pads [m].
+gripper:
+  tcp_z: 0.15                 # tool0 -> tcp [m] (11 mm adapter plate + 139 mm to the middle of the pads); must match urdf arg tcp_z
+  open_theta: 0.0             # default "open" command (gap 0.085 m)
+  max_theta: 0.78             # never command beyond this (hard stop 0.7929)
+  finger_reach_closed: 0.024  # how far the finger bottoms reach below the tcp when closed on an object [m]
+  finger_open_reach: 0.020    # ... and while open for the approach (theta 0.1 .. 0.5) [m]
+  finger_pad_width: 0.029     # finger width along the tool y axis [m]
+  finger_outer: 0.034         # outer edge of the finger links beyond the inner pad surface [m]
+  inner_edge_inset: 0.0       # between the pads the "inner" height limit applies up to the pad surface
+  inner_rise: 0.026           # between the pads, objects may rise this far above the tcp before they hit the inner knuckles
+  max_object_width: 0.080     # widest object that can be grasped across the closing direction [m]  (stroke 85 mm)
+  min_object_width: 0.012
+  squeeze: 0.006              # command the fingers this much narrower than the object [m]
+  open_margin: 0.030          # open the fingers to (object width + this) before the descent [m]
+  min_open_gap: 0.060         # ... but never narrower than this [m]
+  # free half-width between the finger mechanism [m] as a function of the height above the tcp [m].
+  # An object wider than the free half-width must stay below that height (it would jam in the mechanism).
+  rise_profile:
+    - [0.026, 0.045]
+    - [0.036, 0.025]
+    - [0.046, 0.013]
+    - [0.056, 0.007]
+  gap_lut:
+    - [0.0, 0.0850]
+    - [0.1, 0.0760]
+    - [0.2, 0.0663]
+    - [0.3, 0.0560]
+    - [0.4, 0.0453]
+    - [0.5, 0.0343]
+    - [0.6, 0.0230]
+    - [0.7, 0.0116]
+    - [0.7929, 0.0010]

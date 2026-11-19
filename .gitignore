@@ -1,0 +1,11 @@
+build/
+install/
+log/
+devel/
+*.bag
+*.mcap
+*.db3
+*.pyc
+__pycache__/
+*.zip
+*Zone.Identifier

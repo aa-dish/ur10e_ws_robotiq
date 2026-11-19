@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+install/
+log/
+src/Universal_Robots_ROS2_Description/urdf/generated.urdf

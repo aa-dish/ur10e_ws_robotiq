@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+  Robotiq 2F-140 parallel gripper (stroke 140 mm).  Selected with the xacro arg  gripper:=2f140  (default).
+  Links/joints/meshes: PickNikRobotics/ros2_robotiq_gripper (BSD-3, see meshes/robotiq_2f_140/LICENSE_*).
+
+  * ONE actuated joint ${prefix}gripper_joint:  0.0 rad = fully open (140 mm), ~0.70 rad = closed.
+    All other finger joints are <mimic>; gz_ros2_control drives them.
+  * Same mounting as the 2F-85: UR -> Robotiq adapter plate on tool0, fingers close along tool x,
+    approach along tool z.  The base is rotated by pi/2 about z (as in the PickNik macro) so that the
+    closing direction is the tool x axis.
+-->
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find ur_description)/urdf/gripper_2f140_parts.xacro"/>
+
+  <xacro:macro name="robotiq_2f140_gripper" params="prefix parent">
+    <!-- UR -> Robotiq adapter plate (same ISO flange as the 2F-85) -->
+    <link name="${prefix}ur_to_robotiq_link">
+      <visual>
+        <geometry><mesh filename="package://ur_description/meshes/robotiq_2f_85/visual/ur_to_robotiq_adapter.dae"/></geometry>
+      </visual>
+      <collision>
+        <geometry><mesh filename="package://ur_description/meshes/robotiq_2f_85/collision/ur_to_robotiq_adapter.stl"/></geometry>
+      </collision>
+      <inertial>
+        <mass value="0.01"/>
+        <origin xyz="0 0 0"/>
+        <inertia ixx="0.000044" ixy="0.0" ixz="0.0" iyy="0.000027" iyz="0.0" izz="0.000027"/>
+      </inertial>
+    </link>
+    <joint name="${prefix}ur_to_robotiq_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${prefix}ur_to_robotiq_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="${prefix}robotiq_base_link"/>
+    <joint name="${prefix}robotiq_base_joint" type="fixed">
+      <parent link="${prefix}ur_to_robotiq_link"/>
+      <child link="${prefix}robotiq_base_link"/>
+      <origin xyz="0 0 0.011" rpy="0 0 ${pi/2}"/>
+    </joint>
+
+    <link name="${prefix}robotiq_140_base_link">
+      <inertial>
+        <origin xyz="8.625E-08 -4.6583E-06 0.03145" rpy="0 0 0"/>
+        <mass value="0.22652"/>
+        <inertia ixx="0.00020005" ixy="-4.2442E-10" ixz="-2.9069E-10" iyy="0.00017832" iyz="-3.4402E-08" izz="0.00013478"/>
+      </inertial>
+      <visual>
+        <geometry><mesh filename="package://ur_description/meshes/robotiq_2f_140/visual/robotiq_2f_140_base_link.stl"/></geometry>
+        <material name=""><color rgba="0.1 0.1 0.1 1"/></material>
+      </visual>
+      <collision>
+        <geometry><mesh filename="package://ur_description/meshes/robotiq_2f_140/collision/robotiq_2f_140_base_link.stl"/></geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}robotiq_140_base_joint" type="fixed">
+      <parent link="${prefix}robotiq_base_link"/>
+      <child link="${prefix}robotiq_140_base_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <xacro:finger_links prefix="${prefix}" fingerprefix="left" stroke="140"/>
+    <xacro:finger_links prefix="${prefix}" fingerprefix="right" stroke="140"/>
+    <xacro:finger_joint prefix="${prefix}"/>
+    <xacro:right_outer_knuckle_joint prefix="${prefix}"/>
+
+    <!-- Gazebo: rubber-like finger pads -->
+    <gazebo reference="${prefix}left_inner_finger_pad">
+      <mu1>1.5</mu1><mu2>1.5</mu2><kp>100000.0</kp><kd>1.0</kd><minDepth>0.002</minDepth>
+    </gazebo>
+    <gazebo reference="${prefix}right_inner_finger_pad">
+      <mu1>1.5</mu1><mu2>1.5</mu2><kp>100000.0</kp><kd>1.0</kd><minDepth>0.002</minDepth>
+    </gazebo>
+  </xacro:macro>
+</robot>

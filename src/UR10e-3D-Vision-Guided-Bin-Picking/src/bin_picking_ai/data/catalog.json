@@ -1,0 +1,714 @@
+{
+ "sausage_tonic": {
+  "model": "Weston_No_33_Signature_Sausage_Tonic_12_fl_oz",
+  "entities": [
+   "weston_no_33"
+  ],
+  "dims_xyz": [
+   0.0655,
+   0.0625,
+   0.1987
+  ],
+  "names": [
+   "sausage tonic",
+   "sausage tonic",
+   "weston",
+   "weston no 33",
+   "tonic",
+   "brown bottle"
+  ],
+  "categories": [
+   "bottle"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    134.1,
+    119.5,
+    80.4
+   ],
+   "hue_hist": [
+    0.1401,
+    0.2428,
+    0.4023,
+    0.0501,
+    0.0294,
+    0.0117,
+    0.0519,
+    0.0375,
+    0.0104,
+    0.0117,
+    0.0009,
+    0.0001,
+    0.0003,
+    0.0002,
+    0.0001,
+    0.0003,
+    0.0013,
+    0.009
+   ],
+   "sat_hist": [
+    0.3059,
+    0.4357,
+    0.2442,
+    0.0142
+   ]
+  }
+ },
+ "potted_meat_can": {
+  "model": "PottedMeatCan",
+  "entities": [
+   "potted_meat_can_0",
+   "potted_meat_can"
+  ],
+  "dims_xyz": [
+   0.1021,
+   0.0601,
+   0.0835
+  ],
+  "names": [
+   "potted meat can",
+   "potted meat",
+   "spam",
+   "meat can",
+   "can of meat",
+   "tin"
+  ],
+  "categories": [
+   "can"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    99.4,
+    98.3,
+    68.5
+   ],
+   "hue_hist": [
+    0.0373,
+    0.0512,
+    0.1922,
+    0.3439,
+    0.0852,
+    0.0066,
+    0.0057,
+    0.0038,
+    0.0016,
+    0.0034,
+    0.0314,
+    0.1019,
+    0.1306,
+    0.0024,
+    0.0005,
+    0.0006,
+    0.0005,
+    0.0013
+   ],
+   "sat_hist": [
+    0.1258,
+    0.2344,
+    0.4493,
+    0.1906
+   ]
+  }
+ },
+ "mustard_bottle": {
+  "model": "MustardBottle",
+  "entities": [
+   "mustard_bottle"
+  ],
+  "dims_xyz": [
+   0.0972,
+   0.0666,
+   0.1913
+  ],
+  "names": [
+   "mustard bottle",
+   "mustard",
+   "mustard bottle",
+   "french mustard"
+  ],
+  "categories": [
+   "bottle"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    195.8,
+    166.9,
+    57.0
+   ],
+   "hue_hist": [
+    0.0243,
+    0.0202,
+    0.8675,
+    0.004,
+    0.0009,
+    0.0004,
+    0.0004,
+    0.0004,
+    0.0006,
+    0.0029,
+    0.0693,
+    0.0005,
+    0.0025,
+    0.0004,
+    0.0002,
+    0.0002,
+    0.0002,
+    0.0052
+   ],
+   "sat_hist": [
+    0.031,
+    0.0253,
+    0.2251,
+    0.7186
+   ]
+  }
+ },
+ "vitamin_d3": {
+  "model": "YumYum_D3_Liquid",
+  "entities": [
+   "yumyum_d3_liquid"
+  ],
+  "dims_xyz": [
+   0.0333,
+   0.0344,
+   0.1001
+  ],
+  "names": [
+   "vitamin d3",
+   "vitamin d",
+   "vitamin d3",
+   "yum yum",
+   "yumyum",
+   "d3",
+   "drops",
+   "orange box"
+  ],
+  "categories": [
+   "box"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    189.0,
+    139.7,
+    73.1
+   ],
+   "hue_hist": [
+    0.0113,
+    0.8117,
+    0.0343,
+    0.0147,
+    0.0043,
+    0.0056,
+    0.0025,
+    0.0019,
+    0.0021,
+    0.0338,
+    0.0707,
+    0.0043,
+    0.0013,
+    0.0004,
+    0.0001,
+    0.0004,
+    0.0002,
+    0.0002
+   ],
+   "sat_hist": [
+    0.1187,
+    0.0473,
+    0.6066,
+    0.2274
+   ]
+  }
+ },
+ "parchment": {
+  "model": "Wilton_PreCut_Parchment_Sheets_10_x_15_24_sheets",
+  "entities": [
+   "wilton_precut_parchment"
+  ],
+  "dims_xyz": [
+   0.2737,
+   0.053,
+   0.0567
+  ],
+  "names": [
+   "parchment",
+   "parchment",
+   "parchment sheets",
+   "baking paper",
+   "wilton parchment"
+  ],
+  "categories": [
+   "box"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    198.4,
+    192.2,
+    188.1
+   ],
+   "hue_hist": [
+    0.0961,
+    0.0827,
+    0.1219,
+    0.1756,
+    0.0648,
+    0.0137,
+    0.0484,
+    0.0216,
+    0.0069,
+    0.0527,
+    0.0507,
+    0.0348,
+    0.0593,
+    0.1442,
+    0.0097,
+    0.0088,
+    0.0046,
+    0.0035
+   ],
+   "sat_hist": [
+    0.8311,
+    0.1032,
+    0.0536,
+    0.0121
+   ]
+  }
+ },
+ "sprinkles": {
+  "model": "Wilton_Pearlized_Sugar_Sprinkles_525_oz_Gold",
+  "entities": [
+   "wilton_pearlized_sugar"
+  ],
+  "dims_xyz": [
+   0.0457,
+   0.0456,
+   0.1345
+  ],
+  "names": [
+   "sprinkles",
+   "sprinkles",
+   "sugar sprinkles",
+   "wilton sprinkles",
+   "sugar"
+  ],
+  "categories": [
+   "jar"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    194.5,
+    181.0,
+    160.2
+   ],
+   "hue_hist": [
+    0.0758,
+    0.4368,
+    0.1366,
+    0.0338,
+    0.002,
+    0.0,
+    0.0079,
+    0.001,
+    0.0,
+    0.0296,
+    0.0933,
+    0.0765,
+    0.0741,
+    0.0148,
+    0.0005,
+    0.0153,
+    0.0015,
+    0.0005
+   ],
+   "sat_hist": [
+    0.493,
+    0.4792,
+    0.0275,
+    0.0003
+   ]
+  }
+ },
+ "whey_protein": {
+  "model": "Whey_Protein_Vanilla_12_Packets",
+  "entities": [
+   "whey_protein_vanilla"
+  ],
+  "dims_xyz": [
+   0.1045,
+   0.1557,
+   0.1556
+  ],
+  "names": [
+   "whey protein",
+   "whey",
+   "whey protein",
+   "protein",
+   "protein packets"
+  ],
+  "categories": [
+   "box"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    124.6,
+    133.0,
+    112.9
+   ],
+   "hue_hist": [
+    0.0001,
+    0.0006,
+    0.0217,
+    0.5135,
+    0.0058,
+    0.0018,
+    0.0019,
+    0.0016,
+    0.0017,
+    0.0043,
+    0.1143,
+    0.3322,
+    0.0005,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "sat_hist": [
+    0.1264,
+    0.583,
+    0.2884,
+    0.0021
+   ]
+  }
+ },
+ "coffee_mix": {
+  "model": "Nescafe_Momento_Mocha_Specialty_Coffee_Mix_8_ct",
+  "entities": [
+   "nescafe_momento"
+  ],
+  "dims_xyz": [
+   0.0912,
+   0.0644,
+   0.1614
+  ],
+  "names": [
+   "coffee mix",
+   "coffee",
+   "nescafe",
+   "mocha",
+   "coffee mix"
+  ],
+  "categories": [
+   "box"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    132.3,
+    124.1,
+    115.9
+   ],
+   "hue_hist": [
+    0.1621,
+    0.3871,
+    0.1347,
+    0.0264,
+    0.0025,
+    0.0002,
+    0.003,
+    0.0007,
+    0.0003,
+    0.0098,
+    0.0385,
+    0.0705,
+    0.1024,
+    0.0204,
+    0.0037,
+    0.0212,
+    0.0113,
+    0.0052
+   ],
+   "sat_hist": [
+    0.5928,
+    0.363,
+    0.0428,
+    0.0014
+   ]
+  }
+ },
+ "chewing_gum": {
+  "model": "Orbit_Bubblemint_Mini_Bottle_6_ct",
+  "entities": [
+   "orbit_bubblemint"
+  ],
+  "dims_xyz": [
+   0.2104,
+   0.0696,
+   0.1194
+  ],
+  "names": [
+   "chewing gum",
+   "orbit",
+   "gum",
+   "chewing gum",
+   "bubblemint",
+   "pink box"
+  ],
+  "categories": [
+   "box"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    182.1,
+    142.2,
+    173.1
+   ],
+   "hue_hist": [
+    0.001,
+    0.0009,
+    0.0434,
+    0.006,
+    0.0006,
+    0.0003,
+    0.0004,
+    0.0007,
+    0.0007,
+    0.0058,
+    0.2301,
+    0.078,
+    0.0228,
+    0.0209,
+    0.0428,
+    0.371,
+    0.1729,
+    0.0016
+   ],
+   "sat_hist": [
+    0.3794,
+    0.4373,
+    0.1641,
+    0.0192
+   ]
+  }
+ },
+ "nesquik": {
+  "model": "Nestle_Nesquik_Chocolate_Powder_Flavored_Milk_Additive_109_Oz_Canister",
+  "entities": [
+   "nestle_nesquick"
+  ],
+  "dims_xyz": [
+   0.0622,
+   0.1068,
+   0.1437
+  ],
+  "names": [
+   "nesquik",
+   "nesquik",
+   "chocolate powder",
+   "chocolate",
+   "nestle",
+   "cocoa"
+  ],
+  "categories": [
+   "canister"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    221.6,
+    205.6,
+    74.0
+   ],
+   "hue_hist": [
+    0.0154,
+    0.0789,
+    0.6441,
+    0.1481,
+    0.0126,
+    0.0078,
+    0.0034,
+    0.002,
+    0.0014,
+    0.0188,
+    0.0206,
+    0.0119,
+    0.0258,
+    0.0002,
+    0.001,
+    0.0016,
+    0.0051,
+    0.0012
+   ],
+   "sat_hist": [
+    0.1022,
+    0.1722,
+    0.0768,
+    0.6487
+   ]
+  }
+ },
+ "cereal": {
+  "model": "Vans_Cereal_Honey_Nut_Crunch_11_oz_box",
+  "entities": [
+   "vans_cereal"
+  ],
+  "dims_xyz": [
+   0.2025,
+   0.0556,
+   0.2815
+  ],
+  "names": [
+   "cereal",
+   "cereal",
+   "cereal box",
+   "vans",
+   "honey crunch",
+   "honey nut"
+  ],
+  "categories": [
+   "box"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    208.9,
+    198.9,
+    174.7
+   ],
+   "hue_hist": [
+    0.0601,
+    0.0736,
+    0.2932,
+    0.0641,
+    0.0304,
+    0.0054,
+    0.0034,
+    0.004,
+    0.0033,
+    0.0445,
+    0.3873,
+    0.0083,
+    0.0043,
+    0.002,
+    0.0006,
+    0.0024,
+    0.0034,
+    0.0099
+   ],
+   "sat_hist": [
+    0.6732,
+    0.1271,
+    0.1814,
+    0.0183
+   ]
+  }
+ },
+ "curl_lotion": {
+  "model": "Marc_Anthony_True_Professional_Strictly_Curls_Curl_Defining_Lotion",
+  "entities": [
+   "marc_anthony_strictly_curls"
+  ],
+  "dims_xyz": [
+   0.0567,
+   0.0507,
+   0.1953
+  ],
+  "names": [
+   "curl lotion",
+   "lotion",
+   "curl lotion",
+   "marc anthony",
+   "curls",
+   "hair lotion",
+   "curl defining lotion"
+  ],
+  "categories": [
+   "bottle"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    204.5,
+    216.5,
+    151.4
+   ],
+   "hue_hist": [
+    0.0007,
+    0.0001,
+    0.0109,
+    0.8618,
+    0.0384,
+    0.0251,
+    0.0212,
+    0.0186,
+    0.0184,
+    0.0043,
+    0.0005,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "sat_hist": [
+    0.1625,
+    0.8064,
+    0.0237,
+    0.0073
+   ]
+  }
+ },
+ "nitric_fuel": {
+  "model": "Twinlab_Nitric_Fuel",
+  "entities": [
+   "twinlab_nitric_fuel"
+  ],
+  "dims_xyz": [
+   0.0597,
+   0.0594,
+   0.1132
+  ],
+  "names": [
+   "nitric fuel",
+   "nitric fuel",
+   "twinlab",
+   "pre workout",
+   "supplement"
+  ],
+  "categories": [
+   "pouch"
+  ],
+  "appearance": {
+   "mean_rgb": [
+    135.4,
+    125.7,
+    123.5
+   ],
+   "hue_hist": [
+    0.0197,
+    0.1152,
+    0.0,
+    0.0009,
+    0.0039,
+    0.0002,
+    0.0004,
+    0.0002,
+    0.0001,
+    0.0014,
+    0.3411,
+    0.3204,
+    0.1613,
+    0.0159,
+    0.0041,
+    0.005,
+    0.0047,
+    0.0055
+   ],
+   "sat_hist": [
+    0.8685,
+    0.0182,
+    0.0471,
+    0.0662
+   ]
+  }
+ }
+}

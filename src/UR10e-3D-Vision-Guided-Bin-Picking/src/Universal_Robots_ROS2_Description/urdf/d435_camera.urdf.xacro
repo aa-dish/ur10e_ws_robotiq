@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+  Simulated Intel RealSense D435 (RGB-D) camera.
+
+  The camera is a fixed link of the robot description, so robot_state_publisher
+  publishes its TF automatically (no extrinsic calibration is needed in
+  simulation).  It is mounted above the work table looking straight down
+  ("eye-to-hand").  Change `camera_xyz` / `camera_rpy` (xacro args, see
+  ur_macro.xacro) to move it, e.g. onto the wrist for an "eye-in-hand" setup.
+
+  Frames
+    camera_link                  ROS body frame of the camera: x forward, y left, z up.
+                                 The Gazebo sensor looks along +x of this frame.
+    camera_color_optical_frame   ROS optical frame: z forward, x right, y down.
+                                 Images / point clouds are expressed in this frame.
+
+  Gazebo topics (sensor <topic> = d435, bridged to ROS by the launch file)
+    /d435/image          sensor_msgs/Image   rgb8
+    /d435/depth_image    sensor_msgs/Image   32FC1  (metres, z-depth)
+    /d435/camera_info    sensor_msgs/CameraInfo
+    /d435/points         sensor_msgs/PointCloud2
+-->
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:macro name="d435_camera"
+               params="parent tf_prefix:='' xyz rpy
+                       hfov:=1.2 width:=640 height:=480 fps:=6
+                       near:=0.2 far:=3.0 topic:=d435">
+
+    <link name="${tf_prefix}camera_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <!-- D435 housing: 25 mm deep (x), 90 mm wide (y), 25 mm tall (z) -->
+          <box size="0.025 0.090 0.025"/>
+        </geometry>
+        <material name="${tf_prefix}camera_grey">
+          <color rgba="0.12 0.12 0.15 1.0"/>
+        </material>
+      </visual>
+      <!-- Deliberately NO <collision>: the camera floats above the table and
+           must never interfere with the arm. -->
+      <inertial>
+        <mass value="0.072"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="4.4e-5" ixy="0" ixz="0" iyy="1.3e-5" iyz="0" izz="4.4e-5"/>
+      </inertial>
+    </link>
+
+    <joint name="${tf_prefix}camera_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${tf_prefix}camera_link"/>
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+    </joint>
+
+    <!-- ROS optical convention: z forward, x right, y down -->
+    <link name="${tf_prefix}camera_color_optical_frame"/>
+    <joint name="${tf_prefix}camera_color_optical_joint" type="fixed">
+      <parent link="${tf_prefix}camera_link"/>
+      <child link="${tf_prefix}camera_color_optical_frame"/>
+      <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+    </joint>
+
+    <gazebo reference="${tf_prefix}camera_link">
+      <sensor name="d435" type="rgbd_camera">
+        <always_on>1</always_on>
+        <update_rate>${fps}</update_rate>
+        <visualize>false</visualize>
+        <topic>${topic}</topic>
+        <camera>
+          <horizontal_fov>${hfov}</horizontal_fov>
+          <image>
+            <width>${width}</width>
+            <height>${height}</height>
+          </image>
+          <clip>
+            <near>${near}</near>
+            <far>${far}</far>
+          </clip>
+        </camera>
+      </sensor>
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

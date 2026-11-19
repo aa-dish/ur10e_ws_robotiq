@@ -1,0 +1,184 @@
+[
+ {
+  "model": "Weston_No_33_Signature_Sausage_Tonic_12_fl_oz",
+  "name": "weston_no_33",
+  "pose": [
+   0.948962,
+   -1.08137,
+   0.726102,
+   0.017293599999999916,
+   -0.02987410000000006,
+   0.005213800000000012
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "PottedMeatCan",
+  "name": "potted_meat_can_0",
+  "pose": [
+   1.1201310753535916,
+   -1.168747876870887,
+   0.7276749688979967,
+   -1.5182258674087064,
+   0.21762945503082148,
+   1.544913702558804
+  ],
+  "link": "link"
+ },
+ {
+  "model": "PottedMeatCan",
+  "name": "potted_meat_can",
+  "pose": [
+   0.7658920738196822,
+   -1.1861331982128076,
+   0.7276739683698293,
+   -1.518225780992348,
+   0.21762944651112787,
+   -0.27906504398211734
+  ],
+  "link": "link"
+ },
+ {
+  "model": "MustardBottle",
+  "name": "mustard_bottle",
+  "pose": [
+   0.592992,
+   -1.10657,
+   0.726701,
+   -0.8599989999999996,
+   0.346388,
+   -0.10850700000000002
+  ],
+  "link": "link"
+ },
+ {
+  "model": "YumYum_D3_Liquid",
+  "name": "yumyum_d3_liquid",
+  "pose": [
+   0.8485,
+   -0.981989,
+   0.72674,
+   -0.006315310000000022,
+   -0.004651630000000003,
+   -2.8784200000000006
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Wilton_PreCut_Parchment_Sheets_10_x_15_24_sheets",
+  "name": "wilton_precut_parchment",
+  "pose": [
+   0.777148,
+   -1.29634,
+   0.72488,
+   -0.002790680000000002,
+   0.014548300000000005,
+   3.124359999999997
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Wilton_Pearlized_Sugar_Sprinkles_525_oz_Gold",
+  "name": "wilton_pearlized_sugar",
+  "pose": [
+   0.9190395063987494,
+   -1.1932496273494786,
+   0.7267961533963347,
+   -0.006755354026139689,
+   0.0049257063473669566,
+   -3.0988371276098783
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Whey_Protein_Vanilla_12_Packets",
+  "name": "whey_protein_vanilla",
+  "pose": [
+   1.14008,
+   -0.993785,
+   0.726567,
+   -0.0028023400000000026,
+   -0.005516740000000001,
+   -2.793719999999999
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Nescafe_Momento_Mocha_Specialty_Coffee_Mix_8_ct",
+  "name": "nescafe_momento",
+  "pose": [
+   0.494928,
+   -1.30068,
+   0.72657,
+   -0.00309832,
+   -0.0070154199999999875,
+   -0.3074009999999994
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Orbit_Bubblemint_Mini_Bottle_6_ct",
+  "name": "orbit_bubblemint",
+  "pose": [
+   1.13558,
+   -1.31409,
+   0.72648,
+   0.00142731,
+   -0.003796370000000011,
+   0.42945600000000056
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Nestle_Nesquik_Chocolate_Powder_Flavored_Milk_Additive_109_Oz_Canister",
+  "name": "nestle_nesquick",
+  "pose": [
+   0.701764,
+   -0.95255,
+   0.726633,
+   -0.004357529999999998,
+   -0.0007753239999999992,
+   -2.0057800000000015
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Vans_Cereal_Honey_Nut_Crunch_11_oz_box",
+  "name": "vans_cereal",
+  "pose": [
+   0.465364,
+   -1.03875,
+   0.726269,
+   -0.0040480299999999985,
+   -0.008230060000000004,
+   1.5956700000000006
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Marc_Anthony_True_Professional_Strictly_Curls_Curl_Defining_Lotion",
+  "name": "marc_anthony_strictly_curls",
+  "pose": [
+   0.9485769867897031,
+   -0.9269790053367616,
+   0.7263169884681702,
+   0.006758596381179101,
+   -0.04069232098454329,
+   -2.041516284393489
+  ],
+  "link": "link_0"
+ },
+ {
+  "model": "Twinlab_Nitric_Fuel",
+  "name": "twinlab_nitric_fuel",
+  "pose": [
+   0.5819950103759766,
+   -0.8849779963493348,
+   0.7266319990158081,
+   0.0001639920038782883,
+   0.00828611039290217,
+   2.693938769090772
+  ],
+  "link": "link_0"
+ }
+]
